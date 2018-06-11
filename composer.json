@@ -1,0 +1,26 @@
+{
+  "name" : "templado/debug",
+  "description" : "Templado Debugging Helper",
+  "license" : "BSD-3-Clause",
+  "authors" : [
+    {
+      "name" : "Arne Blankerts",
+      "email" : "arne@blankerts.de",
+      "role" : "Developer"
+    }
+  ],
+  "support" : {
+    "issues" : "https://github.com/templado/debug/issues"
+  },
+  "require" : {
+    "php" : "^7.2",
+    "templado/engine": "^2.2"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  },
+  "minimum-stability" : "stable",
+  "prefer-stable" : true
+}

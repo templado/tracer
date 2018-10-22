@@ -1,6 +1,6 @@
 {
-  "name" : "templado/debug",
-  "description" : "Templado Debugging Helper",
+  "name" : "templado/tracer",
+  "description" : "Templado Tracing Helper",
   "license" : "BSD-3-Clause",
   "authors" : [
     {
@@ -10,7 +10,7 @@
     }
   ],
   "support" : {
-    "issues" : "https://github.com/templado/debug/issues"
+    "issues" : "https://github.com/templado/tracer/issues"
   },
   "require" : {
     "php" : "^7.2",

@@ -1,5 +1,5 @@
 <?php declare(strict_types = 1);
-namespace Templado\Debug\Demo;
+namespace Templado\Tracer\Demo;
 
 require __DIR__ . '/src/autoload.php';
 
@@ -33,7 +33,7 @@ class SampleModel {
 $sample = new SampleModel();
 
 
-$tracer = new \Templado\Debug\Tracer();
+$tracer = new \Templado\Tracer\Tracer();
 $trm = $tracer->start($sample);
 
 $x = $trm->getChild()->getData();
@@ -41,5 +41,7 @@ $y = $trm->getFoo();
 
 $trace = $tracer->finish();
 
-$printer = new \Templado\Debug\CoveragePrinter();
+var_dump($trace);
+
+$printer = new \Templado\Tracer\CoveragePrinter();
 echo $printer->toText($trace);

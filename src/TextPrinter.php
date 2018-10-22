@@ -1,10 +1,10 @@
 <?php declare(strict_types = 1);
-namespace Templado\Debug;
+namespace Templado\Tracer;
 
 class TextPrinter {
 
     public function toText(TraceLog $log): string {
-        $buffer = count($log) . " calls recorded: \n";
+        $buffer = \count($log) . " calls recorded: \n";
 
         foreach($log as $call) {
             /** @var Call $call */

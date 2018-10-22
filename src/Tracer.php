@@ -1,5 +1,5 @@
 <?php declare(strict_types = 1);
-namespace Templado\Debug;
+namespace Templado\Tracer;
 
 class Tracer {
 
@@ -43,6 +43,7 @@ class Tracer {
             );
         }
 
+        /** @noinspection PhpUnusedLocalVariableInspection $tracer used in ProxyModel.tpl.php */
         $tracer = $this;
         $classTpl = file_get_contents(__DIR__ . '/templates/ProxyModel.tpl.php');
         $code = str_replace(
@@ -55,7 +56,7 @@ class Tracer {
     }
 
     public function recordCall(object $model, string $method, ?string $originalValue, $result): void {
-        if (is_object($result)) {
+        if (\is_object($result)) {
             $this->registerRelation($model, $result);
         }
         $this->calls[] = new Call(
@@ -67,7 +68,7 @@ class Tracer {
         );
     }
 
-    private function registerRelation(object $model, object $result) {
+    private function registerRelation(object $model, object $result): void {
         $this->relations[spl_object_id($result)] = spl_object_id($model);
     }
 

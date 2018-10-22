@@ -7,11 +7,11 @@ spl_autoload_register(
         static $classes = null;
         if ($classes === null) {
             $classes = array(
-                'templado\\debug\\call' => '/Call.php',
-                'templado\\debug\\coverageprinter' => '/CoveragePrinter.php',
-                'templado\\debug\\textprinter' => '/TextPrinter.php',
-                'templado\\debug\\tracelog' => '/TraceLog.php',
-                'templado\\debug\\tracer' => '/Tracer.php'
+                'templado\\tracer\\call' => '/Call.php',
+                'templado\\tracer\\coverageprinter' => '/CoveragePrinter.php',
+                'templado\\tracer\\textprinter' => '/TextPrinter.php',
+                'templado\\tracer\\tracelog' => '/TraceLog.php',
+                'templado\\tracer\\tracer' => '/Tracer.php'
             );
         }
         $cn = strtolower($class);

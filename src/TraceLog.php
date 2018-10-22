@@ -1,7 +1,5 @@
 <?php declare(strict_types = 1);
-namespace Templado\Debug;
-
-use Traversable;
+namespace Templado\Tracer;
 
 class TraceLog implements \IteratorAggregate, \Countable {
 
@@ -20,7 +18,7 @@ class TraceLog implements \IteratorAggregate, \Countable {
     }
 
     public function count(): int {
-        return count($this->logData);
+        return \count($this->logData);
     }
 
 }
